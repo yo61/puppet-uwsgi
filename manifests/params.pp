@@ -7,14 +7,14 @@
 class uwsgi::params{
   # these variables are surfaced as parameters in init.pp and may be over-ridden
   $package_ensure = 'present'
-  $listen_port     = 2222
+  #$listen_port     = 2222
 
   # these variables are purely internal
   case $::osfamily {
-    'Debian': {
-      $package_name = 'uwsgi'
-      $service_name = 'uwsgi'
-    }
+    #'Debian': {
+    #  $package_name = 'uwsgi'
+    #  $service_name = 'uwsgi'
+    #}
     'RedHat', 'Amazon': {
       $package_name       = 'uwsgi'
       $config_file        = '/etc/uwsgi.conf'

@@ -14,9 +14,9 @@
 #
 class uwsgi(
   # mandatory params first
-  $param1,
-  $param2,
-  $param3         = $::uwsgi::params::param3,
+  #$param1,
+  #$param2,
+  #$param3         = $::uwsgi::params::param3,
   $package_name   = $::uwsgi::params::package_name,
   $package_ensure = $::uwsgi::params::package_ensure,
   $service_ensure = 'running',
@@ -30,9 +30,9 @@ class uwsgi(
     package_ensure => $package_ensure,
   }->
   class{'::uwsgi::config':
-    param1 => $param1,
-    param2 => $param2,
-    param3 => $param3,
+    #param1 => $param1,
+    #param2 => $param2,
+    #param3 => $param3,
   }~>
   class{'::uwsgi::service':
     ensure => $service_ensure,
