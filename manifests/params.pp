@@ -17,7 +17,7 @@ class uwsgi::params{
     #}
     'RedHat', 'Amazon': {
       $package_name       = 'uwsgi'
-      $config_file        = '/etc/uwsgi.conf'
+      $config_file        = '/etc/uwsgi.ini'
       $service_name       = 'uwsgi'
       $service_hasstatus  = true
       $service_hasrestart = true

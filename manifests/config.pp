@@ -14,7 +14,7 @@ class uwsgi::config(
 
   include ::uwsgi::params
   file{$::uwsgi::params::config_file:
-    content => template("${module_name}/uwsgi.conf.erb'),
+    content => template("${module_name}/uwsgi.ini.erb'),
   }
 
 }
