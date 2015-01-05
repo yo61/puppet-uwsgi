@@ -40,8 +40,7 @@ class uwsgi(
   }
 
   Class['::uwsgi::install']~>
-  Class['::uwsgi::service']->
-  Class['::uwsgi']
+  Class['::uwsgi::service']
 
   contain
     'uwsgi::config',
