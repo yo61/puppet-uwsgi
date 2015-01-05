@@ -4,9 +4,10 @@ define uwsgi::vassal(
   $ensure = 'present',
   $ini_source  = undef,
   $ini_content = undef,
+  $plugins = [],
 ) {
 
-  require ::uwsgi
+  uwsgi::plugin{$plugins:}
  
   validate_re($ensure, '^(present|absent)$',
     "${ensure} is not supported for ensure. Allowed values are 'present' and 'absent'."
