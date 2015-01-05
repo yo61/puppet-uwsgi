@@ -5,7 +5,7 @@ define uwsgi::plugin(
   require ::uwsgi
 
   package{"uwsgi::plugin::${name}":
-    ensure = $ensure
+    ensure => $ensure,
   }
 
 }
