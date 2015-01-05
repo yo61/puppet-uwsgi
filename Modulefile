@@ -1,0 +1,10 @@
+name          'yo61-uwsgi'
+version       '0.1.0'
+source        'https://github.com/yo61/puppet-uwsgi'
+author        'yo61'
+license       'Apache 2.0'
+summary       'Puppet module for managing uWSGI on RHEL/CentOS'
+description   ''
+project_page  'https://github.com/yo61/puppet-uwsgi'
+
+dependency 'puppetlabs/stdlib'
