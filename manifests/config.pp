@@ -13,6 +13,7 @@ class uwsgi::config(
   # validate params here
 
   include ::uwsgi::params
+  $emperor_dir = $::uwsgi::params::emperor_dir
   file{$::uwsgi::params::config_file:
     content => template("${module_name}/uwsgi.ini.erb"),
   }
