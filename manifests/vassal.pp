@@ -29,8 +29,8 @@ define uwsgi::vassal(
     ensure  => $ini_ensure,
     content => $ini_content,
     source  => $ini_source,
-    owner   => $owner
-    group   => $group
+    owner   => $owner,
+    group   => $group,
   }
 
 }
